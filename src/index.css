@@ -239,6 +239,7 @@ article.nextSlide {
 
 .home .section__body .game {
   font-size: 2rem;
+  min-width: 10rem;
 }
 
 .home .section__body .game a {
@@ -253,12 +254,22 @@ article.nextSlide {
   padding: 1rem;
 }
 
-.colors {
+.colors, .numbers {
   padding: 1rem;
   min-height: 90vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+}
+
+.numbers .slide-background-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers .slide-background-color p {
+  font-size: 10rem;
 }
 
 @media screen and (min-width: 992px) {

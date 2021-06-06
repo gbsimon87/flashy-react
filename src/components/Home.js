@@ -15,6 +15,9 @@ function Home() {
         <div className="game">
           <Link to="/colors">Colors</Link>
         </div>
+        <div className="game">
+          <Link to="/numbers">Numbers</Link>
+        </div>
       </section>
     </div>
   )
