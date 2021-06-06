@@ -123,30 +123,22 @@ article.nextSlide {
   transform: translateX(100%);
 }
 
-/* NEW CLASSES */
-.App {
-  height: 90vh;
-  width: 100vw;
-  margin: 0;
-  overflow: hidden;
-}
-
 .section {
   display: flex;
   flex-flow: column;
   height: 100%;
   justify-content: space-around;
-  padding: 1rem;
 }
 
-.section .section__title {
-  text-align: right;
-  align-items: center;
+.section__title {
   text-transform: capitalize;
   color: #112a4363;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.section .section__body {
+.section__body {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -155,22 +147,21 @@ article.nextSlide {
   display: flex;
   overflow: hidden;
   min-height: 25rem;
-  height: 25rem;
 }
 
-.section .section__body .article {
+.section__body .article {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.section .section__body .article .article__controls h4 {
+.section__body .article .article__controls h4 {
   flex-basis: 90%;
   font-size: 2rem;
 }
 
-.section .section__body .article .article__controls {
+.section__body .article .article__controls {
   display: flex;
   width: 100%;
   padding: 1rem;
@@ -178,7 +169,7 @@ article.nextSlide {
   align-items: center;
 }
 
-.section .section__body .article .article__controls .speaker-phone {
+.section__body .article .article__controls .speaker-phone {
   cursor: pointer;
   position: absolute;
   bottom: 5rem;
@@ -187,18 +178,18 @@ article.nextSlide {
   border-radius: 0.5rem;
 }
 
-.section .section__body .article .article__controls .speaker-phone svg {
+.section__body .article .article__controls .speaker-phone svg {
   color: #00000052;
 }
 
-.section .section__footer {
+.section__footer {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.section .section__footer button {
+.section__footer button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid pink;
@@ -209,9 +200,47 @@ article.nextSlide {
   cursor: pointer;
 }
 
-.section .section__footer button svg {
+.section__footer button svg {
   font-size: 3rem;
   transition: var(--transition);
+}
+
+.App {
+  margin: 0 auto;
+}
+
+.home {
+  height: 100%;
+}
+
+.home {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home .section__title {
+  text-transform: capitalize;
+  color: #112a4363;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.home ul li {
+  margin-bottom: 2rem;
+}
+
+.colors {
+  padding: 1rem;
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 992px) {
