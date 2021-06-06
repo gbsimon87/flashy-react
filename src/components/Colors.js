@@ -45,7 +45,9 @@ function Colors({ randomColors }) {
   return (
     <div className="colors">
       <section className="section__title">
-        <Link to="/">Flashy</Link>
+        <h2>
+          <Link to="/">Flashy</Link>
+        </h2>
         <h2>
           Colors
         </h2>

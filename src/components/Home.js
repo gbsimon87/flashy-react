@@ -12,11 +12,9 @@ function Home() {
         </h2>
       </section>
       <section className="section__body">
-        <ul>
-          <li>
-            <Link to="/colors">Colors</Link>
-          </li>
-        </ul>
+        <div className="game">
+          <Link to="/colors">Colors</Link>
+        </div>
       </section>
     </div>
   )
