@@ -254,7 +254,7 @@ article.nextSlide {
   padding: 1rem;
 }
 
-.colors, .numbers {
+.colors, .numbers, .letters {
   padding: 1rem;
   min-height: 90vh;
   display: flex;
@@ -262,12 +262,15 @@ article.nextSlide {
   justify-content: space-between;
 }
 
+.letters .slide-background-color,
 .numbers .slide-background-color {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: capitalize;
 }
 
+.letters .slide-background-color p,
 .numbers .slide-background-color p {
   font-size: 10rem;
 }

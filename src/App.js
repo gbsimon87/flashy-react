@@ -6,7 +6,8 @@ import {
 import Home from './components/Home';
 import Colors from './components/Colors';
 import Numbers from "./components/Numbers";
-import { randomColors, numbers } from './data'
+import Letters from "./components/Letters";
+import { randomColors, randomNumbers, randomLetters } from './data'
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
           <Colors randomColors={randomColors} />
         </Route>
         <Route path="/numbers">
-          <Numbers numbers={numbers} />
+          <Numbers randomNumbers={randomNumbers} />
+        </Route>
+        <Route path="/letters">
+          <Letters randomLetters={randomLetters} />
         </Route>
         <Route path="/">
           <Home />

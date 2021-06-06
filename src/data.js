@@ -442,7 +442,7 @@ export const randomColors = [
   },
 ];
 
-export const numbers = [
+export const randomNumbers = [
   { value: 1, name: "one" },
   { value: 2, name: "two" },
   { value: 3, name: "three" },
@@ -544,3 +544,32 @@ export const numbers = [
   { value: 99, name: "ninety-nine" },
   { value: 100, name: "one hundred" },
 ];
+
+export const randomLetters = [
+  { name: "a" },
+  { name: "b" },
+  { name: "c" },
+  { name: "d" },
+  { name: "e" },
+  { name: "f" },
+  { name: "g" },
+  { name: "h" },
+  { name: "i" },
+  { name: "j" },
+  { name: "k" },
+  { name: "l" },
+  { name: "m" },
+  { name: "n" },
+  { name: "o" },
+  { name: "p" },
+  { name: "q" },
+  { name: "r" },
+  { name: "s" },
+  { name: "t" },
+  { name: "u" },
+  { name: "v" },
+  { name: "w" },
+  { name: "x" },
+  { name: "y" },
+  { name: "z" },
+]
