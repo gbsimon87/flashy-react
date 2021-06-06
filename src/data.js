@@ -1,3 +1,6 @@
+import { BsCircle, BsSquare, BsTriangle, BsPentagon } from "react-icons/bs";
+import { FiHexagon } from "react-icons/fi";
+
 export const randomColors = [
   {
     name: "AliceBlue",
@@ -546,30 +549,58 @@ export const randomNumbers = [
 ];
 
 export const randomLetters = [
-  { name: "a" },
-  { name: "b" },
-  { name: "c" },
-  { name: "d" },
-  { name: "e" },
-  { name: "f" },
-  { name: "g" },
-  { name: "h" },
-  { name: "i" },
-  { name: "j" },
-  { name: "k" },
-  { name: "l" },
-  { name: "m" },
-  { name: "n" },
-  { name: "o" },
-  { name: "p" },
-  { name: "q" },
-  { name: "r" },
-  { name: "s" },
-  { name: "t" },
-  { name: "u" },
-  { name: "v" },
-  { name: "w" },
-  { name: "x" },
-  { name: "y" },
-  { name: "z" },
+  { value: "a" },
+  { value: "b" },
+  { value: "c" },
+  { value: "d" },
+  { value: "e" },
+  { value: "f" },
+  { value: "g" },
+  { value: "h" },
+  { value: "i" },
+  { value: "j" },
+  { value: "k" },
+  { value: "l" },
+  { value: "m" },
+  { value: "n" },
+  { value: "o" },
+  { value: "p" },
+  { value: "q" },
+  { value: "r" },
+  { value: "s" },
+  { value: "t" },
+  { value: "u" },
+  { value: "v" },
+  { value: "w" },
+  { value: "x" },
+  { value: "y" },
+  { value: "z" },
 ]
+
+export const randomShapes =  [
+  {
+    id: 1,
+    value: <BsSquare />,
+    description: "square"
+  },
+  {
+    id: 2,
+    value: <BsTriangle />,
+    description: "triangle"
+  },
+  {
+    id: 3,
+    value: <FiHexagon />,
+    description: "hexagon"
+  },
+  {
+    id: 4,
+    value: <BsCircle />,
+    description: "circle"
+  },
+  {
+    id: 5,
+    value: <BsPentagon />,
+    description: "pentagon"
+  },
+];

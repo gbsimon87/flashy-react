@@ -254,7 +254,7 @@ article.nextSlide {
   padding: 1rem;
 }
 
-.colors, .numbers, .letters {
+.colors, .numbers, .letters, .shapes {
   padding: 1rem;
   min-height: 90vh;
   display: flex;
@@ -263,7 +263,8 @@ article.nextSlide {
 }
 
 .letters .slide-background-color,
-.numbers .slide-background-color {
+.numbers .slide-background-color,
+.shapes .slide-background-color {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,7 +272,8 @@ article.nextSlide {
 }
 
 .letters .slide-background-color p,
-.numbers .slide-background-color p {
+.numbers .slide-background-color p,
+.shapes .slide-background-color p {
   font-size: 10rem;
 }
 

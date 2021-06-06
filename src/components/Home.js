@@ -3,7 +3,6 @@ import {
 } from "react-router-dom";
 
 function Home() {
-  
   return (
     <div className="home">
       <section className="section__title">
@@ -20,6 +19,9 @@ function Home() {
         </div>
         <div className="game">
           <Link to="/letters">Letters</Link>
+        </div>
+        <div className="game">
+          <Link to="/shapes">Shapes</Link>
         </div>
       </section>
     </div>

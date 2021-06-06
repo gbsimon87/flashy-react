@@ -5,20 +5,20 @@ import {
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 
-function Letters({ randomLetters }) {
-  const [letter] = useState(randomLetters);
+function Shapes({ randomShapes }) {
+  const [shape] = useState(randomShapes);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(true);
 
   useEffect(() => {
-    const lastIndex = letter.length - 1;
+    const lastIndex = shape.length - 1;
     if (index < 0) {
       setIndex(lastIndex);
     }
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, letter]);
+  }, [index, shape]);
 
   const handlePreviousButton = () => {
     setIndex(index - 1);
@@ -43,37 +43,37 @@ function Letters({ randomLetters }) {
   }, [paused, index])
 
   return (
-    <div className="letters">
+    <div className="shapes">
       <section className="section__title">
         <h2>
           <Link to="/">Flashy</Link>
         </h2>
         <h2>
-          Letters
+          Shapes
         </h2>
       </section>
       <section className="section__body">
-        {letter.map((letter, numberIndex) => {
-          const { value, description } = letter;
+        {randomShapes.map((shape, numberIndex) => {
+          const { id, value, description } = shape;
           let position = 'nextSlide';
           if (numberIndex === index) {
             position = 'activeSlide';
           }
           if (
             numberIndex === index - 1 ||
-            (index === 0 && numberIndex === letter.length - 1)
+            (index === 0 && numberIndex === shape.length - 1)
           ) {
             position = 'lastSlide';
           }
           return (
-            <article className={`${position} article`} key={value}>
+            <article className={`${position} article`} key={id}>
               <div
                 className="slide-background-color"
                 >
                   <p>{value}</p>
                 </div>
                 <div className="article__controls">
-                  {description && <h4>{description}</h4>}
+                  <h4>{description}</h4>
               </div>
             </article>
           );
@@ -100,4 +100,4 @@ function Letters({ randomLetters }) {
   )
 }
 
-export default Letters
+export default Shapes
