@@ -5,6 +5,8 @@ import {
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 
+import Logo from "../components/ui/Logo";
+
 function Numbers({ randomNumbers }) {
   const [numbers] = useState(randomNumbers);
   const [index, setIndex] = useState(0);
@@ -44,14 +46,6 @@ function Numbers({ randomNumbers }) {
 
   return (
     <div className="numbers">
-      <section className="section__title">
-        <h2>
-          <Link to="/">Flashy</Link>
-        </h2>
-        <h2>
-          Numbers
-        </h2>
-      </section>
       <section className="section__body">
         {numbers.map((number, numberIndex) => {
           const { name } = number;

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import {
-  Link
-} from "react-router-dom";
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+import Logo from "./ui/Logo";
 
 function Letters({ randomLetters }) {
   const [letter] = useState(randomLetters);
@@ -44,14 +44,6 @@ function Letters({ randomLetters }) {
 
   return (
     <div className="letters">
-      <section className="section__title">
-        <h2>
-          <Link to="/">Flashy</Link>
-        </h2>
-        <h2>
-          Letters
-        </h2>
-      </section>
       <section className="section__body">
         {letter.map((letter, numberIndex) => {
           const { value, description } = letter;

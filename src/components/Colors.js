@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import {
-  Link
-} from "react-router-dom";
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+import Logo from "./ui/Logo";
 
 function Colors({ randomColors }) {
   const [colors] = useState(randomColors);
@@ -44,14 +44,6 @@ function Colors({ randomColors }) {
 
   return (
     <div className="colors">
-      <section className="section__title">
-        <h2>
-          <Link to="/">Flashy</Link>
-        </h2>
-        <h2>
-          Colors
-        </h2>
-      </section>
       <section className="section__body">
         {randomColors.map((colours, personIndex) => {
           const { name } = colours;

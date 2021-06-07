@@ -5,6 +5,8 @@ import {
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 
+import Logo from "./ui/Logo";
+
 function Shapes({ randomShapes }) {
   const [shape] = useState(randomShapes);
   const [index, setIndex] = useState(0);
@@ -44,14 +46,6 @@ function Shapes({ randomShapes }) {
 
   return (
     <div className="shapes">
-      <section className="section__title">
-        <h2>
-          <Link to="/">Flashy</Link>
-        </h2>
-        <h2>
-          Shapes
-        </h2>
-      </section>
       <section className="section__body">
         {randomShapes.map((shape, numberIndex) => {
           const { id, value, description } = shape;
