@@ -1,7 +1,6 @@
 import {
   Link
 } from "react-router-dom";
-import  Logo from "../components/ui/Logo";
 import Footer from "./ui/Footer";
 
 function Home() {

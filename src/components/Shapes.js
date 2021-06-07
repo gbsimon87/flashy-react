@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
-import {
-  Link
-} from "react-router-dom";
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
-
-import Logo from "./ui/Logo";
 
 function Shapes({ randomShapes }) {
   const [shape] = useState(randomShapes);

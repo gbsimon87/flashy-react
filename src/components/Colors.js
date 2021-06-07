@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
-import Logo from "./ui/Logo";
 
 function Colors({ randomColors }) {
   const [colors] = useState(randomColors);
