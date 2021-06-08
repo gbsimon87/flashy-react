@@ -262,7 +262,7 @@ article.nextSlide {
 }
 
 .home .section__body .game a {
-  min-width: 12rem;
+  min-width: 15rem;
   display: flex;
   justify-content: center;
   background: var(--clr-primary-5);
