@@ -1,18 +1,25 @@
 import { GoSettings } from "react-icons/go";
 import { Link } from "react-router-dom";
-import Logo from './Logo'
-import PageTitle from './PageTitle'
+import { useGlobalContext } from "../../context";
 
 function Nav() {
+  const { pageTitle, theme } = useGlobalContext();
+
   return (
-    <nav className="nav">
+    <nav className="nav" style={theme}>
       <header className="nav__header">
-        <Logo />
+        <Link to="/" style={theme}>
+          <h2 className="logo">Flashy</h2>
+        </Link>
       </header>
       <div className="nav__right">
-        <PageTitle />
+        <div className="page-title">
+          { pageTitle }
+        </div>
         <div className="nav__right--settings">
-        <Link to="/settings"><GoSettings /></Link>
+          <Link style={theme} to="/settings">
+            <GoSettings />
+          </Link>
         </div>
       </div>
     </nav>

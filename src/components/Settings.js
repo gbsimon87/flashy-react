@@ -1,11 +1,13 @@
-import { useGlobalContext } from "../context";
 import ToggleSwitch from "./ui/Toggleswitch/ToggleSwitch";
+import { useGlobalContext } from "../context";
 
 function Settings() {
-  const { autoplay, toggleAutoplay, darkMode, toggleDarkMode } = useGlobalContext();
+  const { autoplay, toggleAutoplay, theme, themes, toggleTheme } = useGlobalContext();
+  
+  const isDarkMode = theme === themes.light ? false : true;
 
   return (
-    <div className="settings">
+    <div className="settings" style={theme}>
       <div className="settings__options">
         <div className="setting">
           <div>Autoplay</div>
@@ -24,8 +26,8 @@ function Settings() {
             <ToggleSwitch
               name="darkmode"
               id="darkmode"
-              checked={darkMode || false}
-              onChange={checked => toggleDarkMode(darkMode)}
+              checked={isDarkMode || false}
+              onChange={checked => toggleTheme(theme, themes)}
               />
           </div>
         </div>

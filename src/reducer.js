@@ -1,9 +1,8 @@
 const reducer = (state, action) => {
-  const { payload, type } = action;
+  const { payload, type, pageURL } = action;
 
   switch (type) {
     case "CHANGE_PAGE_TITLE":
-      const { pageURL } = action;
 
       if (pageURL === "/") {
         return { ...state, pageTitle: "home"}
@@ -28,10 +27,31 @@ const reducer = (state, action) => {
     
     case "TOGGLE_AUTOPLAY":
       return { ...state, autoplay: !payload }
-
-    case "TOGGLE_DARK_MODE":
-      return { ...state, darkMode: !payload}
     
+    case "TOGGLE_THEME":
+      const { currentTheme, themes } = payload;
+      const theme = currentTheme === themes.light ? themes.dark : themes.light
+      
+      return { ...state, theme }
+
+    case "CHANGE_GAME_TYPE":
+      let gameType = null;
+
+      if (pageURL === "/colors") {
+        gameType = "colors"
+      }
+      if (pageURL === "/shapes") {
+        gameType = "shapes"
+      }
+      if (pageURL === "/numbers") {
+        gameType = "numbers"
+      }
+      if (pageURL === "/letters") {
+        gameType = "letters"
+      }
+
+      return { ...state, gameType }
+
     default: return "No case found"
   }
   throw new Error("No matching action type found in the reducer");

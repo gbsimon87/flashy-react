@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+
 import { useGlobalContext } from '../context';
+import SectionFooter from './ui/SectionFooter';
 
 function Colors({ randomColors }) {
   const { autoplay } = useGlobalContext();
@@ -77,23 +77,12 @@ function Colors({ randomColors }) {
           );
         })}
       </section>
-      <section className="section__footer">
-        <button
-          className="button section__body__button"
-          onClick={() => handlePreviousButton()}>
-          <FiChevronLeft />
-        </button>
-        <button
-          className="button section__body__button"
-          onClick={() => setPaused(!paused)}>
-            { paused ? <BsFillPlayFill /> : <BsFillPauseFill /> }
-        </button>
-        <button
-          className="button section__body__button"
-          onClick={() => handleNextButton()}>
-          <FiChevronRight />
-        </button>
-      </section>
+      <SectionFooter
+        handlePreviousButton={handlePreviousButton}
+        paused={paused}
+        setPaused={setPaused}
+        handleNextButton={handleNextButton}
+        />
     </div>
   )
 }

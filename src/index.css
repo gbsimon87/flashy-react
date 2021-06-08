@@ -100,7 +100,7 @@ End Global Styles
 
 .nav .nav__right .page-title {
   font-size: 1.5rem;
-  color: var(--clr-primary-2);
+  /* color: var(--clr-primary-2); */
   text-transform: capitalize;
 }
 
@@ -235,13 +235,12 @@ article.nextSlide {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: var(--clr-primary-5);
 }
 
 .section__footer button svg {
   font-size: 3rem;
   transition: var(--transition);
-  color: var(--clr-primary-1);
+  /* color: var(--clr-primary-1); */
 }
 
 .App {
@@ -254,6 +253,7 @@ article.nextSlide {
   justify-content: center;
   padding-bottom: 5rem;
   padding-top: 2rem;
+  min-height: calc(100vh - 71px);
 }
 
 .home .section__title {
@@ -286,14 +286,14 @@ article.nextSlide {
   min-width: 15rem;
   display: flex;
   justify-content: center;
-  background: var(--clr-primary-5);
+  background: var(--clr-primary-4);
   color: white;
   padding: 1rem;
   border-radius: 0.25rem;
 }
 
-.colors, .numbers, .letters, .shapes {
-  padding: 0 1rem 3rem 1rem;
+.colors, .numbers, .letters, .shapes, .game-template {
+  padding: 1rem 1rem 3rem 1rem;
   padding-bottom: 2rem;
   display: flex;
   flex-flow: column;
@@ -302,7 +302,7 @@ article.nextSlide {
   min-width: 100%;
   bottom: 0;
   left: 0;
-  height: calc(100% - 5rem);
+  height: calc(100% - 71px);
 }
 
 .letters .slide-background-color,
