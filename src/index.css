@@ -168,9 +168,9 @@ article.nextSlide {
   position: relative;
   display: flex;
   overflow: hidden;
-  min-height: 25rem;
   margin-bottom: 2rem;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  flex: 2;
 }
 
 .section__body .article {
@@ -288,6 +288,7 @@ article.nextSlide {
   min-width: 100%;
   bottom: 0;
   left: 0;
+  height: calc(100% - 5rem);
 }
 
 .letters .slide-background-color,
@@ -314,6 +315,7 @@ article.nextSlide {
   position: absolute;
   bottom: 0;
   left: 0;
+  text-align: right;
 }
 
 @media screen and (min-width: 992px) {
