@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import {
   Switch,
   Route,
+  useLocation
 } from "react-router-dom";
 
 import Home from './components/Home';
@@ -8,10 +10,20 @@ import Colors from './components/Colors';
 import Numbers from "./components/Numbers";
 import Letters from "./components/Letters";
 import Shapes from "./components/Shapes";
-import { randomColors, randomNumbers, randomLetters, randomShapes } from './data'
 import Nav from "./components/ui/Nav";
+import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
+import { useGlobalContext } from './context';
 
 function App() {
+  let { pathname } = useLocation();
+  const { changePageTitle } = useGlobalContext();
+  
+  useEffect(() => {
+    changePageTitle(pathname);
+    return () => {}
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname])
+
   return (
     <div className="App">
       <Nav />
