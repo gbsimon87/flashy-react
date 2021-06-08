@@ -10,7 +10,8 @@ const AppContext = createContext();
 
 const initialState = {
   loading: false,
-  pageTitle: 'Home'
+  pageTitle: 'Home',
+  autoplay: false
 }
 
 const AppProvider = ({ children }) => {
@@ -19,11 +20,21 @@ const AppProvider = ({ children }) => {
   const changePageTitle = (pageURL = "") => {
     dispatch({ type: "CHANGE_PAGE_TITLE", pageURL });
   }
+  
+  const toggleAutoplay = (payload) => {
+    dispatch({ type: "TOGGLE_AUTOPLAY", payload });
+  }
+  
+  const toggleDarkMode = (payload) => {
+    dispatch({ type: "TOGGLE_DARK_MODE", payload });
+  }
 
   return (
     <AppContext.Provider value={{
       ...state,
-      changePageTitle
+      changePageTitle,
+      toggleAutoplay,
+      toggleDarkMode,
     }}>
       { children }
     </AppContext.Provider>

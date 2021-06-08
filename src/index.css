@@ -91,10 +91,21 @@ End Global Styles
   border-bottom: 1px solid var(--clr-primary-5);
 }
 
-.nav .page-title {
+.nav__right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav .nav__right .page-title {
   font-size: 1.5rem;
-  color: var(--clr-primary-1);
+  color: var(--clr-primary-2);
   text-transform: capitalize;
+}
+
+.nav__right--settings {
+  color: var(--clr-primary-2);
 }
 
 .section-center {
@@ -178,6 +189,7 @@ article.nextSlide {
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
+  color: var(--clr-primary-4);
 }
 
 .section__body .article .article__controls h4 {
@@ -223,11 +235,13 @@ article.nextSlide {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background: var(--clr-primary-5);
 }
 
 .section__footer button svg {
   font-size: 3rem;
   transition: var(--transition);
+  color: var(--clr-primary-1);
 }
 
 .App {
@@ -305,6 +319,36 @@ article.nextSlide {
 .numbers .slide-background-color p,
 .shapes .slide-background-color p {
   font-size: 10rem;
+}
+
+.settings {
+  min-height: calc(100vh - 71px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.settings h2 {
+  margin-bottom: 2rem;
+  color: var(--clr-primary-3);
+}
+
+.settings .settings__options {
+  width: 100%;
+}
+
+.settings .settings__options .setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  background: var(--clr-primary-5);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  color: var(--clr-primary-2);
+  flex: 1;
 }
 
 .footer {

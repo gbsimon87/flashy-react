@@ -13,6 +13,7 @@ import Shapes from "./components/Shapes";
 import Nav from "./components/ui/Nav";
 import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
 import { useGlobalContext } from './context';
+import Settings from "./components/Settings";
 
 function App() {
   let { pathname } = useLocation();
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="/shapes">
             <Shapes randomShapes={randomShapes} />
+          </Route>
+          <Route path="/settings">
+            <Settings />
           </Route>
           <Route path="/">
             <Home />

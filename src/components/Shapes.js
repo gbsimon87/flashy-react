@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { useGlobalContext } from '../context';
 
 function Shapes({ randomShapes }) {
+  const { autoplay } = useGlobalContext();
   const [shape] = useState(randomShapes);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(true);
@@ -38,6 +40,13 @@ function Shapes({ randomShapes }) {
       clearInterval(slider);  
     }
   }, [paused, index])
+
+  useEffect(() => {
+    if (autoplay) {
+      setPaused(false)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="shapes">

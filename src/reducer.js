@@ -1,5 +1,7 @@
 const reducer = (state, action) => {
-  switch (action.type) {
+  const { payload, type } = action;
+
+  switch (type) {
     case "CHANGE_PAGE_TITLE":
       const { pageURL } = action;
 
@@ -18,8 +20,19 @@ const reducer = (state, action) => {
       if (pageURL === "/letters") {
         return { ...state, pageTitle: "letters"}
       }
+      if (pageURL === "/settings") {
+        return { ...state, pageTitle: "settings"}
+      }
+
       break;
-    default:
+    
+    case "TOGGLE_AUTOPLAY":
+      return { ...state, autoplay: !payload }
+
+    case "TOGGLE_DARK_MODE":
+      return { ...state, darkMode: !payload}
+    
+    default: return "No case found"
   }
   throw new Error("No matching action type found in the reducer");
 }

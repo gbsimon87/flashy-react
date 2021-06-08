@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { useGlobalContext } from '../context';
 
 function Numbers({ randomNumbers }) {
+  const { autoplay } = useGlobalContext();
+
   const [numbers] = useState(randomNumbers);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(true);
@@ -38,6 +41,13 @@ function Numbers({ randomNumbers }) {
       clearInterval(slider);
     }
   }, [paused, index])
+
+  useEffect(() => {
+    if (autoplay) {
+      setPaused(false)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="numbers">
