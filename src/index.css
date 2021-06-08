@@ -10,6 +10,7 @@ Begin Variables
   --clr-primary-3: rgb(64,74,111);
   --clr-primary-4: rgb(42,51,71);
   --clr-primary-5: rgb(19,25,45);
+  --transition: all 0.3s linear;
 }
 
 /*
@@ -131,6 +132,7 @@ article {
   height: 100%;
   opacity: 0;
   transition: var(--transition);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 article.activeSlide {
   opacity: 1;
@@ -166,6 +168,8 @@ article.nextSlide {
   display: flex;
   overflow: hidden;
   min-height: 25rem;
+  margin-bottom: 2rem;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
 .section__body .article {
@@ -186,6 +190,7 @@ article.nextSlide {
   padding: 1rem;
   justify-content: space-around;
   align-items: center;
+  flex: 1;
 }
 
 .section__body .article .article__controls .speaker-phone {
@@ -232,9 +237,8 @@ article.nextSlide {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 1rem;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
 }
 
 .home .section__title {
@@ -254,7 +258,9 @@ article.nextSlide {
   justify-content: center;
   align-items: center;
   grid-gap: 1rem;
+  grid-gap: 1rem;
   gap: 1rem;
+  box-shadow: none;
 }
 
 .home .section__body .game {
@@ -273,7 +279,7 @@ article.nextSlide {
 
 .colors, .numbers, .letters, .shapes {
   padding: 0 1rem 3rem 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -290,6 +296,7 @@ article.nextSlide {
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
+  flex: 3;
 }
 
 .letters .slide-background-color p,
@@ -300,11 +307,10 @@ article.nextSlide {
 
 .footer {
   padding: 1rem;
-  color: rgb(119, 146, 201);
   background: rgb(19,25,45);
   color: white;
-  position: absolute;
   min-width: 100%;
+  position: absolute;
   bottom: 0;
   left: 0;
 }

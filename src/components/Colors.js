@@ -33,7 +33,7 @@ function Colors({ randomColors }) {
     if (!paused) {
       slider = setInterval(() => {
         setIndex(index + 1);
-      }, 1000);
+      }, 2000);
     }
     return () => {
       clearInterval(slider);
