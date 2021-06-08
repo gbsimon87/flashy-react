@@ -46,6 +46,7 @@ function Letters({ randomLetters }) {
     if (autoplay) {
       setPaused(false)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
