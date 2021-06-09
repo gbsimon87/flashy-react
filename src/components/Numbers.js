@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Numbers({ randomNumbers }) {
-  const { autoplay } = useGlobalContext();
+  const { autoplay, theme } = useGlobalContext();
 
   const [numbers] = useState(randomNumbers);
   const [index, setIndex] = useState(0);
@@ -49,7 +49,7 @@ function Numbers({ randomNumbers }) {
   }, [])
 
   return (
-    <div className="numbers">
+    <div className="numbers" style={theme.main}>
       <section className="section__body">
         {numbers.map((number, numberIndex) => {
           const { name } = number;

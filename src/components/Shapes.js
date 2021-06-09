@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Shapes({ randomShapes }) {
-  const { autoplay } = useGlobalContext();
+  const { autoplay, theme } = useGlobalContext();
   const [shape] = useState(randomShapes);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(true);
@@ -48,7 +48,7 @@ function Shapes({ randomShapes }) {
   }, [])
 
   return (
-    <div className="shapes">
+    <div className="shapes" style={theme.main}>
       <section className="section__body">
         {randomShapes.map((shape, numberIndex) => {
           const { id, value, description } = shape;

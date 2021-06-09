@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Letters({ randomLetters }) {
-  const { autoplay } = useGlobalContext();
+  const { autoplay, theme } = useGlobalContext();
 
   const [letter] = useState(randomLetters);
   const [index, setIndex] = useState(0);
@@ -50,7 +50,7 @@ function Letters({ randomLetters }) {
   }, [])
 
   return (
-    <div className="letters">
+    <div className="letters" style={theme.main}>
       <section className="section__body">
         {letter.map((letter, numberIndex) => {
           const { value, description } = letter;
