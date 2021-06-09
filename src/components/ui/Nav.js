@@ -6,21 +6,19 @@ function Nav() {
   const { pageTitle, theme } = useGlobalContext();
 
   return (
-    <nav className="nav" style={theme}>
+    <nav className="nav" style={theme.nav}>
       <header className="nav__header">
         <Link to="/" style={theme}>
-          <h2 className="logo">Flashy</h2>
+          <h3 className="logo">Flashy</h3>
         </Link>
       </header>
-      <div className="nav__right">
-        <div className="page-title">
+      <div className="nav__right" >
+        <div className="page-title" style={theme.nav}>
           { pageTitle }
         </div>
-        <div className="nav__right--settings">
-          <Link style={theme} to="/settings">
-            <GoSettings />
-          </Link>
-        </div>
+        <Link style={theme.nav} to="/settings" className="nav-settings">
+          <GoSettings size="2rem" />
+        </Link>
       </div>
     </nav>
   )

@@ -12,7 +12,7 @@ function SectionFooter({
   const { theme } = useGlobalContext();
 
   return (
-    <section className="section__footer">
+    <section className="section__footer" style={theme.footer}>
       <button
         className="button section__body__button"
         style={theme}

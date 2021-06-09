@@ -8,7 +8,7 @@ function Home() {
   const { theme } = useGlobalContext();
   return (
     <>
-      <div className="home" style={theme}>
+      <div className="home" style={theme.main}>
         <section className="section__body">
           <div className="game">
             <Link to="/colors">Colors</Link>

@@ -19,12 +19,32 @@ const themeColors = {
 
 export const themes = {
   dark: {
-    color: themeColors.white,
-    background: themeColors.primary5,
+    nav: {
+      color: themeColors.white,
+      background: themeColors.primary5,
+    },
+    main: {
+      color: themeColors.white,
+      background: themeColors.primary4,
+    },
+    footer: {
+      color: themeColors.white,
+      background: themeColors.primary4,
+    },
   },
   light: {
-    color: themeColors.primary5,
-    background: themeColors.white,
+    nav: {
+      color: themeColors.primary5,
+      background: themeColors.white,
+    },
+    main: {
+      color: themeColors.primary5,
+      background: themeColors.white,
+    },
+    footer: {
+      color: themeColors.primary5,
+      background: themeColors.white,
+    },
   },
 }
 

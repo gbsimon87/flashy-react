@@ -86,26 +86,35 @@ End Global Styles
   padding: 1rem;
 }
 
-.nav .nav__header {
-  border-top: 1px solid var(--clr-primary-5);
-  border-bottom: 1px solid var(--clr-primary-5);
+.nav .nav__header .logo {
+  background: var(--clr-primary-5);
+  color: white;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.2rem;
 }
 
-.nav__right {
+.nav .nav__right {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
+  color: var(--clr-primary-4);
+
 }
 
 .nav .nav__right .page-title {
   font-size: 1.5rem;
-  /* color: var(--clr-primary-2); */
   text-transform: capitalize;
+  color: var(--clr-primary-4);
 }
 
-.nav__right--settings {
-  color: var(--clr-primary-2);
+.nav .nav__right .nav-settings {
+  color: var(--clr-primary-4);
+}
+
+.nav .nav__right--settings svg {
+  color: var(--clr-primary-4);
 }
 
 .section-center {
@@ -229,12 +238,13 @@ article.nextSlide {
 .section__footer button {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid pink;
   flex-basis: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: none;
+  background: white;
 }
 
 .section__footer button svg {
@@ -284,12 +294,23 @@ article.nextSlide {
 
 .home .section__body .game a {
   min-width: 15rem;
+  border: 1px solid var(--clr-primary-4);
+  border-radius: 0.25rem;
   display: flex;
   justify-content: center;
-  background: var(--clr-primary-4);
   color: white;
   padding: 1rem;
-  border-radius: 0.25rem;
+  background: var(--clr-primary-3);
+}
+
+.home .section__body .game a:hover {
+  background-color: var(--clr-primary-5);
+  border: 1px solid var(--clr-primary-5);
+}
+
+.home .section__body .game a:active {
+  background-color: var(--clr-primary-2);
+  border: 1px solid var(--clr-primary-2);
 }
 
 .colors, .numbers, .letters, .shapes, .game-template {
@@ -327,6 +348,7 @@ article.nextSlide {
   flex-flow: column;
   align-items: center;
   padding: 1rem;
+  justify-content: center;
 }
 
 .settings h2 {
@@ -365,5 +387,22 @@ article.nextSlide {
 @media screen and (min-width: 992px) {
   .section {
     width: 95vw;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .footer {
+    position: inherit;
+  }
+  .home {
+    padding-bottom: 0;
+  }
+  .section__body .article {
+    flex-flow: row;
+  }
+  .letters .slide-background-color p,
+  .numbers .slide-background-color p,
+  .shapes .slide-background-color p {
+    font-size: 5rem;
   }
 }

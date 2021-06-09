@@ -7,7 +7,7 @@ function Settings() {
   const isDarkMode = theme === themes.light ? false : true;
 
   return (
-    <div className="settings" style={theme}>
+    <div className="settings" style={theme.main}>
       <div className="settings__options">
         <div className="setting">
           <div>Autoplay</div>

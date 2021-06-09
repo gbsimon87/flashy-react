@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Colors({ randomColors }) {
-  const { autoplay } = useGlobalContext();
+  const { autoplay, theme } = useGlobalContext();
 
   const [colors] = useState(randomColors);
   const [index, setIndex] = useState(0);
@@ -50,7 +50,7 @@ function Colors({ randomColors }) {
   }, [])
 
   return (
-    <div className="colors">
+    <div className="colors" style={theme.main}>
       <section className="section__body">
         {randomColors.map((colours, personIndex) => {
           const { name } = colours;
@@ -70,7 +70,7 @@ function Colors({ randomColors }) {
                 className="slide-background-color"
                 style={{ backgroundColor: `${name}` }}
                 />
-              <div className="article__controls">
+              <div className="article__controls" style={theme.main}>
                 <h4>{name}</h4>
               </div>
             </article>

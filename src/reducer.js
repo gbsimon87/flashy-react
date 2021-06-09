@@ -31,7 +31,6 @@ const reducer = (state, action) => {
     case "TOGGLE_THEME":
       const { currentTheme, themes } = payload;
       const theme = currentTheme === themes.light ? themes.dark : themes.light
-      
       return { ...state, theme }
 
     case "CHANGE_GAME_TYPE":
