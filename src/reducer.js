@@ -54,6 +54,10 @@ const reducer = (state, action) => {
     case "CHANGE_CARD_FLIP_TIME":
       return { ...state, cardFlipTime: parseInt(payload)}
 
+    case "TOGGLE_SIDEBAR":
+      const { isSidebarOpen } = state;
+      return {...state, isSidebarOpen: !isSidebarOpen}
+
     default: throw new Error("No matching action type found in the reducer");
   }
 }

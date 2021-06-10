@@ -10,10 +10,11 @@ import Colors from './components/Colors';
 import Numbers from "./components/Numbers";
 import Letters from "./components/Letters";
 import Shapes from "./components/Shapes";
+import Settings from "./components/Settings";
 import Nav from "./components/ui/Nav";
+import Sidebar from "./components/ui/Sidebar";
 import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
 import { useGlobalContext } from './context';
-import Settings from "./components/Settings";
 
 function App() {
   let { pathname } = useLocation();
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <Sidebar />
       <Nav />
       <main>
         <Switch>

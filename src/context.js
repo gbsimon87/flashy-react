@@ -55,6 +55,7 @@ const initialState = {
   theme: themes.light,
   gameType: null,
   cardFlipTime: 3,
+  isSidebarOpen: false
 }
 
 const AppProvider = ({ children }) => {
@@ -84,6 +85,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CHANGE_CARD_FLIP_TIME", payload });
   }
 
+  const toggleSidebar = () => {
+    dispatch({ type: "TOGGLE_SIDEBAR", state });
+  };
+
   return (
     <AppContext.Provider value={{
       ...state,
@@ -92,7 +97,8 @@ const AppProvider = ({ children }) => {
       toggleTheme,
       themes,
       changeGameType,
-      changeCardFlipTime
+      changeCardFlipTime,
+      toggleSidebar
     }}>
       { children }
     </AppContext.Provider>
