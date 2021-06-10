@@ -39,7 +39,7 @@ function Settings() {
           </div>
         </div>
         <div className="setting">
-          <div>Next card in...</div>
+          <div>Next card in</div>
           <div className="setting__speed">
             <select
               value={cardFlipTime}

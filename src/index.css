@@ -374,7 +374,7 @@ article.nextSlide {
 .settings .settings__options .setting #settingSpeed {
   color: white;
   background-color: var(--clr-primary-1);
-  padding: 1rem;
+  padding: 0.1rem 1rem;
   font-size: 1rem;
   border-radius: 0.5rem;
   outline: none;
