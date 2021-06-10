@@ -53,7 +53,8 @@ const initialState = {
   pageTitle: 'Home',
   autoplay: false,
   theme: themes.light,
-  gameType: null
+  gameType: null,
+  cardFlipTime: 3,
 }
 
 const AppProvider = ({ children }) => {
@@ -79,6 +80,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "TOGGLE_THEME", payload });
   }
 
+  const changeCardFlipTime = (payload) => {
+    dispatch({ type: "CHANGE_CARD_FLIP_TIME", payload });
+  }
+
   return (
     <AppContext.Provider value={{
       ...state,
@@ -87,6 +92,7 @@ const AppProvider = ({ children }) => {
       toggleTheme,
       themes,
       changeGameType,
+      changeCardFlipTime
     }}>
       { children }
     </AppContext.Provider>

@@ -51,9 +51,11 @@ const reducer = (state, action) => {
 
       return { ...state, gameType }
 
-    default: return "No case found"
+    case "CHANGE_CARD_FLIP_TIME":
+      return { ...state, cardFlipTime: parseInt(payload)}
+
+    default: throw new Error("No matching action type found in the reducer");
   }
-  throw new Error("No matching action type found in the reducer");
 }
 
 export default reducer

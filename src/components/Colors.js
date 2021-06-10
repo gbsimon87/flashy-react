@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Colors({ randomColors }) {
-  const { autoplay, theme } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime = 5000 } = useGlobalContext();
 
   const [colors] = useState(randomColors);
   const [index, setIndex] = useState(0);
@@ -35,12 +35,12 @@ function Colors({ randomColors }) {
     if (!paused) {
       slider = setInterval(() => {
         setIndex(index + 1);
-      }, 2000);
+      }, cardFlipTime * 1000);
     }
     return () => {
       clearInterval(slider);
     }
-  }, [paused, index])
+  }, [paused, index, cardFlipTime])
 
   useEffect(() => {
     if (autoplay) {

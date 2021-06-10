@@ -371,6 +371,16 @@ article.nextSlide {
   flex: 1;
 }
 
+.settings .settings__options .setting #settingSpeed {
+  color: white;
+  background-color: var(--clr-primary-1);
+  padding: 1rem;
+  font-size: 1rem;
+  border: navajowhite;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
 .footer {
   padding: 1rem;
   background: rgb(19,25,45);
