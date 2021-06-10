@@ -198,6 +198,7 @@ article.nextSlide {
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
+  padding: 0.5rem;
 }
 
 .section__body .article .article__controls h4 {
@@ -259,8 +260,7 @@ article.nextSlide {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   min-height: calc(100vh - 71px);
 }
 
@@ -376,7 +376,6 @@ article.nextSlide {
   background-color: var(--clr-primary-1);
   padding: 1rem;
   font-size: 1rem;
-  border: navajowhite;
   border-radius: 0.5rem;
   outline: none;
 }
