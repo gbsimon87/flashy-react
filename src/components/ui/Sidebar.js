@@ -22,7 +22,7 @@ const Sidebar = () => {
   return (
     <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`} style={theme.sidebar}>
       <div className='sidebar-header'>
-        <button className='sidebar-close-btn' onClick={toggleSidebar}>
+        <button className='sidebar-close-btn' onClick={toggleSidebar} style={theme.sidebar}>
           <FaTimes />
         </button>
       </div>

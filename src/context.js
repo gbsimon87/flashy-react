@@ -24,7 +24,7 @@ export const themes = {
       background: themeColors.primary5,
     },
     sidebar: {
-      color: themeColors.white,
+      color: themeColors.primary2,
       background: themeColors.primary4,
     },
     main: {
