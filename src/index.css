@@ -98,6 +98,14 @@ End Global Styles
   color: var(--clr-primary-4);
 }
 
+.backdrop {
+  background: #000000c4;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -112,8 +120,10 @@ End Global Styles
   box-shadow: var(--clr-red-dark);
   transition: var(--transition);
   transform: translate(-100%);
-  z-index: 10;
+  z-index: 200;
   background: #FFF;
+  padding: 1rem;
+  border-radius: 0 3.5rem 0 0;
 }
 
 .sidebar .sidebar-close-btn {
@@ -135,9 +145,14 @@ End Global Styles
   display: flex;
 }
 
+.sidebar-content {
+  padding-top: 1rem;
+}
+
 .show-sidebar {
   transform: translate(0);
 }
+
 .sidebar-toggle {
   position: fixed;
   top: 2rem;
@@ -406,11 +421,11 @@ article.nextSlide {
   color: var(--clr-primary-3);
 }
 
-.settings .settings__options {
+.settings__options {
   width: 100%;
 }
 
-.settings .settings__options .setting {
+.settings__options .setting {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -423,7 +438,7 @@ article.nextSlide {
   flex: 1;
 }
 
-.settings .settings__options .setting #settingSpeed {
+.settings__options .setting #settingSpeed {
   color: white;
   background-color: var(--clr-primary-1);
   padding: 0.1rem 1rem;

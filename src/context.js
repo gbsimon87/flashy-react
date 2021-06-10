@@ -23,6 +23,10 @@ export const themes = {
       color: themeColors.white,
       background: themeColors.primary5,
     },
+    sidebar: {
+      color: themeColors.white,
+      background: themeColors.primary4,
+    },
     main: {
       color: themeColors.white,
       background: themeColors.primary4,
@@ -34,6 +38,10 @@ export const themes = {
   },
   light: {
     nav: {
+      color: themeColors.primary5,
+      background: themeColors.white,
+    },
+    sidebar: {
       color: themeColors.primary5,
       background: themeColors.white,
     },

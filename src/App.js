@@ -12,6 +12,7 @@ import Letters from "./components/Letters";
 import Shapes from "./components/Shapes";
 import Settings from "./components/Settings";
 import Nav from "./components/ui/Nav";
+import Backdrop from "./components/ui/Backdrop";
 import Sidebar from "./components/ui/Sidebar";
 import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
 import { useGlobalContext } from './context';
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <Backdrop />
       <Sidebar />
       <Nav />
       <main>
