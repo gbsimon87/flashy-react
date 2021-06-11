@@ -51,7 +51,7 @@ function Letters({ randomLetters }) {
 
   return (
     <div className="letters" style={theme.main}>
-      <section className="section__title">{pageTitle}</section>
+      <section className="section__title" style={theme.main}>{pageTitle}</section>
       <section className="section__body">
         {letter.map((letter, numberIndex) => {
           const { value, description } = letter;

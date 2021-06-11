@@ -51,7 +51,7 @@ function Colors({ randomColors }) {
 
   return (
     <div className="colors" style={theme.main}>
-      <section className="section__title">{pageTitle}</section>
+      <section className="section__title" style={theme.main}>{pageTitle}</section>
       <section className="section__body">
         {randomColors.map((colours, personIndex) => {
           const { name } = colours;

@@ -50,7 +50,7 @@ function Numbers({ randomNumbers }) {
 
   return (
     <div className="numbers" style={theme.main}>
-      <section className="section__title">{pageTitle}</section>
+      <section className="section__title" style={theme.main}>{pageTitle}</section>
       <section className="section__body">
         {numbers.map((number, numberIndex) => {
           const { name } = number;

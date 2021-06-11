@@ -49,7 +49,7 @@ function Shapes({ randomShapes }) {
 
   return (
     <div className="shapes" style={theme.main}>
-      <section className="section__title">{pageTitle}</section>
+      <section className="section__title" style={theme.main}>{pageTitle}</section>
       <section className="section__body">
         {randomShapes.map((shape, numberIndex) => {
           const { id, value, description } = shape;
