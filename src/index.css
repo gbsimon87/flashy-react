@@ -369,6 +369,10 @@ article.nextSlide {
   border-radius: 0.25rem;
 }
 
+.home .home__callout .start-learning:last-child {
+  margin-bottom: 0;
+}
+
 .home .home__benefits {
   padding: 2rem;
   padding-bottom: 5rem;
