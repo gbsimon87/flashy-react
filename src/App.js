@@ -16,6 +16,7 @@ import Settings from "./components/Settings";
 import Nav from "./components/ui/Nav";
 import Backdrop from "./components/ui/Backdrop";
 import Sidebar from "./components/ui/Sidebar";
+import Footer from "./components/ui/Footer";
 import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
 import { useGlobalContext } from './context';
 
@@ -62,6 +63,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      { pathname === "/" && <Footer />}
     </div>
   );
 }

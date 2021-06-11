@@ -1,11 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { AiFillRead } from "react-icons/ai";
 import { SiGooglescholar } from "react-icons/si";
-import { BsBrightnessHigh } from "react-icons/bs";
+import { WiMoonAltWaxingCrescent4 } from "react-icons/wi";
+import { BsFillPersonFill } from "react-icons/bs";
 
-import Footer from "../components/ui/Footer"
-import { useGlobalContext } from '../context'
+import image_one from "../images/mom_child.jpg";
+import { useGlobalContext } from '../context';
 
 function Home() {
   const { theme } = useGlobalContext();
@@ -20,18 +21,29 @@ function Home() {
       <section className="home__benefits" style={theme && theme.home && theme.home.benefits}>
         <div className="benefits_card">
           <AiFillRead size="2rem" />
-          <p>Study at your own pace</p>
+          <p>Learn new concepts</p>
         </div>
         <div className="benefits_card">
           <SiGooglescholar size="2rem" />
           <p>Champion your inner genius</p>
         </div>
         <div className="benefits_card">
-          <BsBrightnessHigh size="2rem" />
-          <p>Keep your mind sharp</p>
+          <BsFillPersonFill size="2rem" />
+          <p>Suitable for all ages</p>
+        </div>
+        <div className="benefits_card">
+          <WiMoonAltWaxingCrescent4 size="2rem" />
+          <p>Switch between light and dark</p>
         </div>
       </section>
-      <Footer />
+      <section className="home__promotional" style={theme && theme.callout}>
+        <div className="home__promotional--title">
+          <h3>Easy learning alongside your child</h3>
+        </div>
+        <div className="home__promotional--image-container">
+          <img src={image_one} alt="Logo" />
+        </div>
+      </section>
     </div>
   )
 }

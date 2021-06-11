@@ -42,19 +42,6 @@ ul {
 a {
   text-decoration: none;
 }
-/* h1 {
-  font-size: 3rem;
-} */
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-
 /*
 =============== 
 End Global Styles
@@ -66,6 +53,9 @@ End Global Styles
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .nav .nav__header .logo {
@@ -112,8 +102,10 @@ End Global Styles
   background: #000000c4;
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+  z-index: 200;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .sidebar {
@@ -157,6 +149,7 @@ End Global Styles
 
 .sidebar-content {
   padding-top: 1rem;
+  overflow: scroll;
 }
 
 .show-sidebar {
@@ -174,24 +167,6 @@ End Global Styles
   transition: var(--transition);
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@media screen and (min-width: 676px) {
-  .sidebar {
-    width: 400px;
-  }
 }
 
 .section-center {
@@ -337,9 +312,9 @@ article.nextSlide {
 }
 
 .home {
-  height: calc(100vh - 121px);
   display: flex;
   flex-flow: column;
+  padding-top: 76px;
 }
 
 .home .home__callout {
@@ -353,7 +328,7 @@ article.nextSlide {
 }
 
 .home .home__callout > * {
-  margin-bottom:  1rem;
+  margin-bottom:  2rem;
 }
 
 .home__callout p {
@@ -374,13 +349,12 @@ article.nextSlide {
 }
 
 .home .home__benefits {
-  padding: 2rem;
-  padding-bottom: 5rem;
   display: flex;
-  font-size: 1.2rem;
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 1rem 3rem;
+  padding: 2rem;
+  font-size: 1.2rem;
 }
 
 .home .home__benefits .benefits_card {
@@ -394,6 +368,27 @@ article.nextSlide {
 
 .home .home__benefits .benefits_card svg {
   margin-right: 2rem;
+}
+
+.home .home__promotional {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.home .home__promotional .home__promotional--image-container {
+  padding: 2rem;
+  background: white;
+}
+
+.home .home__promotional .home__promotional--image-container img {
+  width: 100%;
+  border-radius: 1rem;
+  width: 15rem;
 }
 
 .learn {
@@ -517,32 +512,29 @@ article.nextSlide {
   color: white;
   width: 100%;
   text-align: right;
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
+@keyframes bounce {
+  0% {
+    transform: scale(1);
   }
-  h2 {
-    font-size: 2.5rem;
+  50% {
+    transform: scale(1.5);
   }
-  h3 {
-    font-size: 1.75rem;
+  100% {
+    transform: scale(1);
   }
-  h4 {
-    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 400px;
   }
-  body {
-    font-size: 1rem;
+  .home .home__promotional {
+    flex-flow: row;
   }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
+  .home .home__benefits {
+    justify-content: center;
   }
 }
 
