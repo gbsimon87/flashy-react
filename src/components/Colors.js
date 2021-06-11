@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Colors({ randomColors }) {
-  const { autoplay, theme, cardFlipTime = 5000 } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime = 5000, pageTitle } = useGlobalContext();
 
   const [colors] = useState(randomColors);
   const [index, setIndex] = useState(0);
@@ -51,6 +51,7 @@ function Colors({ randomColors }) {
 
   return (
     <div className="colors" style={theme.main}>
+      <section className="section__title">{pageTitle}</section>
       <section className="section__body">
         {randomColors.map((colours, personIndex) => {
           const { name } = colours;

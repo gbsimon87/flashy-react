@@ -35,6 +35,20 @@ export const themes = {
       color: themeColors.white,
       background: themeColors.primary4,
     },
+    callout: {
+      color: themeColors.primary1,
+      background: themeColors.primary5,
+    },
+    calloutLink: {
+      color: themeColors.primary5,
+      background: themeColors.white,
+    },
+    home: {
+      benefits: {
+        color: themeColors.primary1,
+        backgroundColor: themeColors.primary4,
+      }
+    }
   },
   light: {
     nav: {
@@ -53,12 +67,26 @@ export const themes = {
       color: themeColors.primary5,
       background: themeColors.white,
     },
+    callout: {
+      color: themeColors.white,
+      background: themeColors.primary1,
+    },
+    calloutLink: {
+      color: themeColors.white,
+      background: themeColors.primary5,
+    },
+    home: {
+      benefits: {
+        color: themeColors.primary3,
+        backgroundColor: themeColors.primary2,
+      }
+    }
   },
 }
 
 const initialState = {
   loading: false,
-  pageTitle: 'Home',
+  pageTitle: '',
   autoplay: false,
   theme: themes.light,
   gameType: null,

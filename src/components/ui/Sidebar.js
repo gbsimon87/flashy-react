@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import { useGlobalContext } from '../../context';
@@ -17,12 +17,19 @@ const Sidebar = () => {
     themes
   } = useGlobalContext();
 
+  useEffect(() => {
+    console.log('hello sidebar')
+    return () => {
+      console.log('clean up');
+    }
+  }, [theme])
+
   const isDarkMode = theme === themes.light ? false : true;
 
   return (
-    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`} style={theme.sidebar}>
+    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`} style={theme && theme.sidebar}>
       <div className='sidebar-header'>
-        <button className='sidebar-close-btn' onClick={toggleSidebar} style={theme.sidebar}>
+        <button className='sidebar-close-btn' onClick={toggleSidebar} style={theme && theme.sidebar}>
           <FaTimes />
         </button>
       </div>

@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 
 import Home from './components/Home';
+import Learn from './components/Learn';
+import Error from './components/Error';
 import Colors from './components/Colors';
 import Numbers from "./components/Numbers";
 import Letters from "./components/Letters";
@@ -29,9 +31,9 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Backdrop />
       <Sidebar />
-      <Nav />
       <main>
         <Switch>
           <Route path="/colors">
@@ -49,8 +51,14 @@ function App() {
           <Route path="/settings">
             <Settings />
           </Route>
-          <Route path="/">
+          <Route path="/learn">
+            <Learn />
+          </Route>
+          <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="*">
+            <Error />
           </Route>
         </Switch>
       </main>

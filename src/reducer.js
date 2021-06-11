@@ -7,6 +7,9 @@ const reducer = (state, action) => {
       if (pageURL === "/") {
         return { ...state, pageTitle: "home"}
       }
+      if (pageURL === "/learn") {
+        return { ...state, pageTitle: "learn"}
+      }
       if (pageURL === "/colors") {
         return { ...state, pageTitle: "colors"}
       }

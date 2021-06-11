@@ -13,6 +13,10 @@ Begin Variables
   --transition: all 0.3s linear;
 }
 
+body {
+  font-family: 'Titillium Web', sans-serif
+}
+
 /*
 =============== 
 End Variables
@@ -38,9 +42,9 @@ ul {
 a {
   text-decoration: none;
 }
-h1 {
+/* h1 {
   font-size: 3rem;
-}
+} */
 h2 {
   font-size: 2rem;
 }
@@ -56,6 +60,7 @@ h4 {
 End Global Styles
 ===============
 */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -64,11 +69,16 @@ End Global Styles
 }
 
 .nav .nav__header .logo {
-  background: var(--clr-primary-5);
-  color: white;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
   letter-spacing: 0.2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav .nav__header .logo svg {
+  transform: translateX(-0.2rem);
 }
 
 .nav .nav__right {
@@ -246,6 +256,8 @@ article.nextSlide {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .section__body {
@@ -257,7 +269,7 @@ article.nextSlide {
   overflow: hidden;
   margin-bottom: 2rem;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-  flex: 2;
+  flex: 10;
 }
 
 .section__body .article {
@@ -300,6 +312,7 @@ article.nextSlide {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex: 1;
 }
 
 .section__footer button {
@@ -324,6 +337,57 @@ article.nextSlide {
 }
 
 .home {
+  height: calc(100vh - 121px);
+  display: flex;
+  flex-flow: column;
+}
+
+.home .home__callout {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex: 2 1;
+}
+
+.home .home__callout h1 {
+  margin-bottom:  1rem;
+}
+
+.home__callout p {
+  font-size: 1.25rem;
+}
+
+.home .home__callout .start-learning {
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.home .home__benefits {
+  padding: 2rem;
+  display: flex;
+  font-size: 1.2rem;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem 3rem;
+}
+
+.home .home__benefits .benefits_card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home .home__benefits .benefits_card:last-child {
+  margin-bottom: 0;
+}
+
+.home .home__benefits .benefits_card svg {
+  margin-right: 2rem;
+}
+
+.learn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,18 +395,7 @@ article.nextSlide {
   min-height: calc(100vh - 71px);
 }
 
-.home .section__title {
-  text-transform: capitalize;
-  color: var(--clr-primary-1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-
-.home .section__body {
+.learn .section__body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -353,11 +406,11 @@ article.nextSlide {
   box-shadow: none;
 }
 
-.home .section__body .game {
+.learn .section__body .game {
   font-size: 2.5rem;
 }
 
-.home .section__body .game a {
+.learn .section__body .game a {
   min-width: 15rem;
   border: 1px solid var(--clr-primary-4);
   border-radius: 0.25rem;
@@ -368,12 +421,12 @@ article.nextSlide {
   background: var(--clr-primary-3);
 }
 
-.home .section__body .game a:hover {
+.learn .section__body .game a:hover {
   background-color: var(--clr-primary-5);
   border: 1px solid var(--clr-primary-5);
 }
 
-.home .section__body .game a:active {
+.learn .section__body .game a:active {
   background-color: var(--clr-primary-2);
   border: 1px solid var(--clr-primary-2);
 }
@@ -435,7 +488,8 @@ article.nextSlide {
   padding: 1rem;
   border-radius: 0.2rem;
   color: var(--clr-primary-2);
-  flex: 1;
+  flex: 1 1;
+  min-height: 5rem;
 }
 
 .settings__options .setting #settingSpeed {
@@ -445,14 +499,18 @@ article.nextSlide {
   font-size: 1rem;
   border-radius: 0.5rem;
   outline: none;
+  min-height: 2.25rem;
 }
 
 .footer {
   padding: 1rem;
   background: rgb(19,25,45);
   color: white;
-  min-width: 100%;
+  width: 100%;
   text-align: right;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -489,7 +547,7 @@ article.nextSlide {
   .footer {
     position: inherit;
   }
-  .home {
+  .learn {
     padding-bottom: 0;
   }
   .section__body .article {
