@@ -40,7 +40,7 @@ function Letters({ randomLetters }) {
     return () => {
       clearInterval(slider);  
     }
-  }, [paused, index])
+  }, [paused, index, cardFlipTime])
 
   useEffect(() => {
     if (autoplay) {
