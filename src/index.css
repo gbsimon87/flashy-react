@@ -352,12 +352,16 @@ article.nextSlide {
   flex: 2 1;
 }
 
-.home .home__callout h1 {
+.home .home__callout > * {
   margin-bottom:  1rem;
 }
 
 .home__callout p {
   font-size: 1.25rem;
+}
+
+.home__callout p:last-child {
+  margin-bottom:  2rem;
 }
 
 .home .home__callout .start-learning {
@@ -367,6 +371,7 @@ article.nextSlide {
 
 .home .home__benefits {
   padding: 2rem;
+  padding-bottom: 5rem;
   display: flex;
   font-size: 1.2rem;
   flex-flow: row wrap;
@@ -544,18 +549,33 @@ article.nextSlide {
 }
 
 @media only screen and (orientation: landscape) {
+  .colors, .numbers, .letters, .shapes, .game-template {
+    padding: 0 2rem;
+  }
+  .home {
+    height: auto;
+  }
   .footer {
     position: inherit;
   }
   .learn {
     padding-bottom: 0;
   }
+  .section__body {
+    margin: 0;
+  }
   .section__body .article {
     flex-flow: row;
+  }
+  .section__title {
+    font-size: 1rem;
   }
   .letters .slide-background-color p,
   .numbers .slide-background-color p,
   .shapes .slide-background-color p {
     font-size: 5rem;
   }
+  .slide-background-color svg {
+    font-size: 5rem;
+}
 }
