@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Letters({ randomLetters }) {
-  const { autoplay, theme, pageTitle } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime, pageTitle } = useGlobalContext();
 
   const [letter] = useState(randomLetters);
   const [index, setIndex] = useState(0);
@@ -35,7 +35,7 @@ function Letters({ randomLetters }) {
     if (!paused) {
       slider = setInterval(() => {
         setIndex(index + 1);
-      }, 1000);
+      }, cardFlipTime * 1000);
     }
     return () => {
       clearInterval(slider);  

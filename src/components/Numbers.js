@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+
 import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Numbers({ randomNumbers }) {
-  const { autoplay, theme, pageTitle } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime, pageTitle } = useGlobalContext();
 
   const [numbers] = useState(randomNumbers);
   const [index, setIndex] = useState(0);
@@ -34,12 +35,12 @@ function Numbers({ randomNumbers }) {
     if (!paused) {
       slider = setInterval(() => {
         setIndex(index + 1);
-      }, 1000);
+      }, cardFlipTime * 1000);
     }
     return () => {
       clearInterval(slider);
     }
-  }, [paused, index])
+  }, [paused, index, cardFlipTime])
 
   useEffect(() => {
     if (autoplay) {

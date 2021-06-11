@@ -90,7 +90,7 @@ const initialState = {
   autoplay: false,
   theme: themes.light,
   gameType: null,
-  cardFlipTime: 3,
+  cardFlipTime: 2,
   isSidebarOpen: false
 }
 

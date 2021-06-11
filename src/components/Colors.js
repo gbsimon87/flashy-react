@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Colors({ randomColors }) {
-  const { autoplay, theme, cardFlipTime = 5000, pageTitle } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime, pageTitle } = useGlobalContext();
 
   const [colors] = useState(randomColors);
   const [index, setIndex] = useState(0);

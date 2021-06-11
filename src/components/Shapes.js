@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+
 import { useGlobalContext } from '../context';
 import SectionFooter from './ui/SectionFooter';
 
 function Shapes({ randomShapes }) {
-  const { autoplay, theme, pageTitle } = useGlobalContext();
+  const { autoplay, theme, cardFlipTime, pageTitle } = useGlobalContext();
   const [shape] = useState(randomShapes);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(true);
@@ -33,12 +34,12 @@ function Shapes({ randomShapes }) {
     if (!paused) {
       slider = setInterval(() => {
         setIndex(index + 1);
-      }, 1000);
+      }, cardFlipTime * 1000);
     }
     return () => {
       clearInterval(slider);  
     }
-  }, [paused, index])
+  }, [paused, index, cardFlipTime])
 
   useEffect(() => {
     if (autoplay) {
