@@ -123,7 +123,6 @@ End Global Styles
   transition: var(--transition);
   transform: translate(-100%);
   z-index: 200;
-  background: #FFF;
   padding: 1rem;
   border-radius: 0 3.5rem 0 0;
 }
@@ -324,7 +323,6 @@ article.nextSlide {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  flex: 2 1;
 }
 
 .home .home__callout > * {
@@ -370,19 +368,8 @@ article.nextSlide {
   margin-right: 2rem;
 }
 
-.home .home__promotional {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  gap: 2rem;
-}
-
 .home .home__promotional .home__promotional--image-container {
   padding: 2rem;
-  background: white;
 }
 
 .home .home__promotional .home__promotional--image-container img {
@@ -395,8 +382,7 @@ article.nextSlide {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
-  min-height: calc(100vh - 71px);
+  min-height: 100vh;
 }
 
 .learn .section__body {
@@ -556,9 +542,6 @@ article.nextSlide {
   }
   .learn {
     padding-bottom: 0;
-  }
-  .section__body {
-    margin: 0;
   }
   .section__body .article {
     flex-flow: row;

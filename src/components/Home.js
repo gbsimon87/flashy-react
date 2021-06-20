@@ -36,14 +36,6 @@ function Home() {
           <p>Switch between light and dark</p>
         </div>
       </section>
-      <section className="home__promotional" style={theme && theme.callout}>
-        <div className="home__promotional--title">
-          <h3>Easy learning alongside your child</h3>
-        </div>
-        <div className="home__promotional--image-container">
-          <img src={image_one} alt="Logo" />
-        </div>
-      </section>
     </div>
   )
 }

@@ -72,9 +72,11 @@ function Letters({ randomLetters }) {
                 >
                   <p>{value}</p>
                 </div>
-                <div className="article__controls">
-                  {description && <h4>{description}</h4>}
-              </div>
+                { description && (
+                  <div className="article__controls">
+                    {description && <h4>{description}</h4>}
+                  </div>
+                )}
             </article>
           );
         })}
