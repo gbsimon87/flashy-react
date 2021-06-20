@@ -5,7 +5,6 @@ import { SiGooglescholar } from "react-icons/si";
 import { WiMoonAltWaxingCrescent4 } from "react-icons/wi";
 import { BsFillPersonFill } from "react-icons/bs";
 
-import image_one from "../images/mom_child.jpg";
 import { useGlobalContext } from '../context';
 
 function Home() {
