@@ -52,10 +52,7 @@ End Global Styles
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  position: fixed;
-  left: 0;
-  right: 0;
+  padding: 0.5rem;
 }
 
 .nav .nav__header .logo {
@@ -313,11 +310,13 @@ article.nextSlide {
 .home {
   display: flex;
   flex-flow: column;
-  padding-top: 76px;
+  overflow: hidden;
+  min-height: calc(100vh - 116px);
+  justify-content: space-between;
 }
 
 .home .home__callout {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -351,7 +350,7 @@ article.nextSlide {
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 1rem 3rem;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1.2rem;
 }
 
@@ -382,7 +381,8 @@ article.nextSlide {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
 }
 
 .learn .section__body {
@@ -431,7 +431,7 @@ article.nextSlide {
   min-width: 100%;
   bottom: 0;
   left: 0;
-  height: calc(100% - 71px);
+  height: calc(100% - 60px);
 }
 
 .letters .slide-background-color,
