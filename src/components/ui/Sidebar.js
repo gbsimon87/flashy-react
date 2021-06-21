@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import { useGlobalContext } from '../../context';
@@ -16,13 +15,6 @@ const Sidebar = () => {
     theme,
     themes
   } = useGlobalContext();
-
-  useEffect(() => {
-    console.log('hello sidebar')
-    return () => {
-      console.log('clean up');
-    }
-  }, [theme])
 
   const isDarkMode = theme === themes.light ? false : true;
 

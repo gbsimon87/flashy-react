@@ -8,11 +8,8 @@ import {
 import Home from './components/Home';
 import Learn from './components/Learn';
 import Error from './components/Error';
-import Colors from './components/Colors';
-import Numbers from "./components/Numbers";
-import Letters from "./components/Letters";
-import Shapes from "./components/Shapes";
 import Settings from "./components/Settings";
+import GameTemplate from "./components/ui/GameTemplate";
 import Nav from "./components/ui/Nav";
 import Backdrop from "./components/ui/Backdrop";
 import Sidebar from "./components/ui/Sidebar";
@@ -38,16 +35,16 @@ function App() {
       <main>
         <Switch>
           <Route path="/colors">
-            <Colors randomColors={randomColors} />
+            <GameTemplate data={randomColors} />
           </Route>
           <Route path="/numbers">
-            <Numbers randomNumbers={randomNumbers} />
+            <GameTemplate data={randomNumbers} />
           </Route>
           <Route path="/letters">
-            <Letters randomLetters={randomLetters} />
+            <GameTemplate data={randomLetters} />
           </Route>
           <Route path="/shapes">
-            <Shapes randomShapes={randomShapes} />
+            <GameTemplate data={randomShapes} />
           </Route>
           <Route path="/settings">
             <Settings />

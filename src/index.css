@@ -223,12 +223,15 @@ article.nextSlide {
 
 .section__title {
   text-transform: capitalize;
-  color: #112a4363;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+.section__title svg {
+  margin-right: 0.5rem;
 }
 
 .section__body {
@@ -312,7 +315,7 @@ article.nextSlide {
   flex-flow: column;
   overflow: hidden;
   min-height: calc(100vh - 116px);
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .home .home__callout {

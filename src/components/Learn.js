@@ -7,7 +7,7 @@ function Learn() {
   const { theme } = useGlobalContext();
   return (
     <>
-      <div className="learn" style={theme.main}>
+      <div className="learn" style={theme && theme.main}>
         <section className="section__body">
           <div className="game">
             <Link to="/colors">Colors</Link>

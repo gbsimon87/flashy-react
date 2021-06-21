@@ -3,7 +3,7 @@ import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 
 import { useGlobalContext } from '../../context';
 
-function SectionFooter({
+function GameFooter({
   handlePreviousButton,
   paused,
   setPaused,
@@ -12,7 +12,7 @@ function SectionFooter({
   const { theme } = useGlobalContext();
 
   return (
-    <section className="section__footer" style={theme.footer}>
+    <section className="section__footer" style={theme && theme.footer}>
       <button
         className="button section__body__button"
         style={theme}
@@ -35,4 +35,4 @@ function SectionFooter({
   )
 }
 
-export default SectionFooter
+export default GameFooter
