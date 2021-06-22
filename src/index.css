@@ -232,6 +232,7 @@ article.nextSlide {
 
 .section__title svg {
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .section__body {

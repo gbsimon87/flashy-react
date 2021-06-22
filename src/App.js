@@ -16,6 +16,7 @@ import Sidebar from "./components/ui/Sidebar";
 import Footer from "./components/ui/Footer";
 import { randomColors, randomNumbers, randomLetters, randomShapes } from './data';
 import { useGlobalContext } from './context';
+import { GARouteChangeTracker } from './analytics/ga';
 
 function App() {
   let { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <GARouteChangeTracker />
       <Nav />
       <Backdrop />
       <Sidebar />
