@@ -52,7 +52,7 @@ const GameBody = ({ index, data = [], gameType = "" }) => {
               <div
                 className="slide-background-color"
                 >
-                  <p>{value}</p>
+                  <p>{name}</p>
                 </div>
                 { description && (
                   <div className="article__controls">
