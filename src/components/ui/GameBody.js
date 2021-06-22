@@ -19,7 +19,7 @@ const GameBody = ({ index, data = [], gameType = "" }) => {
 
         if (gameType === "colors") {
           return (
-            <article className={`${position} article`} key={name}>
+            <article className={`${position} article`} key={id}>
               <div
                 className="slide-background-color"
                 style={{ backgroundColor: `${name}` }}
@@ -33,7 +33,7 @@ const GameBody = ({ index, data = [], gameType = "" }) => {
 
         if (gameType ===  "numbers") {
           return (
-            <article className={`${position} article`} key={name}>
+            <article className={`${position} article`} key={id}>
               <div
                 className="slide-background-color"
                 >
@@ -48,7 +48,7 @@ const GameBody = ({ index, data = [], gameType = "" }) => {
 
         if (gameType === "letters") {
           return (
-            <article className={`${position} article`} key={value}>
+            <article className={`${position} article`} key={id}>
               <div
                 className="slide-background-color"
                 >
