@@ -16,6 +16,7 @@ export const GARouteChangeTracker = () => {
 export const initializeGA = () => {
   const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID; // YOUR_OWN_TRACKING_ID
   ReactGA.initialize(TRACKING_ID, {
+    debug: !process.env.production,
     alwaysSendToDefaultTracker: true,
     titleCase: false,
     gaOptions: {
