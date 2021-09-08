@@ -1,6 +1,5 @@
 import { GoSettings } from "react-icons/go";
 import { IoIosFlash } from "react-icons/io";
-import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import { useGlobalContext } from "../../context";
