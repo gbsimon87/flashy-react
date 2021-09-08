@@ -69,8 +69,8 @@ export const themes = {
       background: themeColors.white,
     },
     callout: {
-      color: themeColors.white,
-      background: themeColors.primary1,
+      color: themeColors.primary5,
+      background: themeColors.white,
     },
     calloutLink: {
       color: themeColors.white,
@@ -78,8 +78,8 @@ export const themes = {
     },
     home: {
       benefits: {
-        color: themeColors.primary3,
-        backgroundColor: themeColors.primary2,
+        color: themeColors.primary5,
+        backgroundColor: themeColors.white,
       }
     }
   },
