@@ -19,9 +19,6 @@ function Nav() {
         <div className="nav-settings" style={theme && theme.nav}>
           <GoSettings size="2rem" onClick={toggleSidebar} />
         </div>
-        <div className="nav-title">
-          <Link to="/learn" style={theme && theme.nav}><MdDashboard size="2rem" /></Link>
-        </div>
       </div>
     </nav>
   )
