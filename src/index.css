@@ -330,25 +330,25 @@ article.nextSlide {
   text-align: center;
 }
 
-.home .home__callout > * {
-  margin-bottom:  2rem;
-}
-
 .home__callout p {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-style: inherit;
 }
 
-.home__callout p:last-child {
-  margin-bottom:  2rem;
+.home .home__action {
+  display: flex;
+  justify-content: center;
 }
 
-.home .home__callout .start-learning {
-  padding: 1rem;
+.home .home__action .start-learning {
+  padding: 1.5rem;
   border-radius: 0.25rem;
+  transition: 0.3s;
+  opacity: 1;
 }
 
-.home .home__callout .start-learning:last-child {
-  margin-bottom: 0;
+.home .home__action .start-learning:hover {
+  opacity: 0.8;
 }
 
 .home .home__benefits {

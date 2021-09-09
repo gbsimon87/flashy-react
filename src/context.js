@@ -47,7 +47,6 @@ export const themes = {
     home: {
       benefits: {
         color: themeColors.primary1,
-        backgroundColor: themeColors.primary4,
       }
     }
   },
@@ -79,7 +78,6 @@ export const themes = {
     home: {
       benefits: {
         color: themeColors.primary5,
-        backgroundColor: themeColors.white,
       }
     }
   },

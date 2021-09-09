@@ -12,9 +12,9 @@ function Home() {
   return (
     <div className="home" style={theme && theme.callout}>
       <section className="home__callout">
-        <h1>The simplest way to learn</h1>
-        <p>Studying with flashcards could not be any easier.</p>
-        <p>Browse various categories to learn all sorts of topics.</p>
+        <p>GO AHEAD, LEVEL UP</p>
+      </section>
+      <section className="home__action">
         <Link style={theme && theme.callout && theme.calloutLink} to="/learn" className="start-learning">START LEARNING</Link>
       </section>
       <section className="home__benefits" style={theme && theme.home && theme.home.benefits}>
