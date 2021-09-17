@@ -37,12 +37,11 @@ export const themes = {
       background: themeColors.primary4,
     },
     callout: {
-      color: themeColors.primary1,
-      background: themeColors.primary5,
+      color: themeColors.primary2,
     },
     calloutLink: {
-      color: themeColors.primary5,
-      background: themeColors.white,
+      color: themeColors.white,
+      background: themeColors.primary1
     },
     home: {
       benefits: {
@@ -68,12 +67,11 @@ export const themes = {
       background: themeColors.white,
     },
     callout: {
-      color: themeColors.primary5,
-      background: themeColors.white,
+      color: themeColors.white,
     },
     calloutLink: {
       color: themeColors.white,
-      background: themeColors.primary5,
+      background: themeColors.primary1,
     },
     home: {
       benefits: {

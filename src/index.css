@@ -301,7 +301,6 @@ article.nextSlide {
   align-items: center;
   cursor: pointer;
   border: none;
-  background: white;
 }
 
 .section__footer button svg {
@@ -314,20 +313,18 @@ article.nextSlide {
 }
 
 .home {
-  display: flex;
-  flex-flow: column;
+  position: relative;
   overflow: hidden;
   min-height: calc(100vh - 116px);
   justify-content: space-around;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(19,25,45,0.5)), #ffffff url("./images/learn1.jpeg") no-repeat center -10rem;
 }
 
 .home .home__callout {
   padding: 1rem;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
 }
 
 .home__callout p {
@@ -335,9 +332,16 @@ article.nextSlide {
   font-style: inherit;
 }
 
+.home__callout p:last-child {
+  font-weight: bold;
+}
+
 .home .home__action {
   display: flex;
   justify-content: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .home .home__action .start-learning {
