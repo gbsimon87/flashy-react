@@ -349,6 +349,7 @@ article.nextSlide {
   border-radius: 0.25rem;
   transition: 0.3s;
   opacity: 1;
+  letter-spacing: 0.075rem;
 }
 
 .home .home__action .start-learning:hover {
