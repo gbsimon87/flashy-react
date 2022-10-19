@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 export const GARouteChangeTracker = () => {
   const location = useLocation();
   useEffect(function () {
-    const path = location.pathname + location.search;
+    // const path = location.pathname + location.search;
     // ReactGA.set({ page: path });
     // ReactGA.pageview(path); // Record a pageview for the given page
   }, [location]);
