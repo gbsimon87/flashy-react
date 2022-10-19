@@ -3,7 +3,7 @@ import {
   useContext,
   useReducer,
 } from 'react';
-import { gaSendViewSettingsModal } from './analytics/ga';
+// import { gaSendViewSettingsModal } from './analytics/ga';
 
 import reducer from './reducer';
 
@@ -93,7 +93,7 @@ const initialState = {
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  
+
   const changePageTitle = (pageURL = "") => {
     dispatch({ type: "CHANGE_PAGE_TITLE", pageURL });
   }
@@ -101,11 +101,11 @@ const AppProvider = ({ children }) => {
   const changeGameType = (pageURL = "") => {
     dispatch({ type: "CHANGE_GAME_TYPE", pageURL });
   }
-  
+
   const toggleAutoplay = (payload) => {
     dispatch({ type: "TOGGLE_AUTOPLAY", payload });
   }
-  
+
   const toggleTheme = (currentTheme, themes) => {
     const payload = {
       currentTheme,
@@ -119,8 +119,8 @@ const AppProvider = ({ children }) => {
   }
 
   const toggleSidebar = () => {
-    gaSendViewSettingsModal();
-    dispatch({ type: "TOGGLE_SIDEBAR", state });
+    // gaSendViewSettingsModal();
+    // dispatch({ type: "TOGGLE_SIDEBAR", state });
   };
 
   return (
@@ -134,7 +134,7 @@ const AppProvider = ({ children }) => {
       changeCardFlipTime,
       toggleSidebar
     }}>
-      { children }
+      {children}
     </AppContext.Provider>
   )
 }
