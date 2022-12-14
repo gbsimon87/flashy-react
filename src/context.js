@@ -3,7 +3,6 @@ import {
   useContext,
   useReducer,
 } from 'react';
-// import { gaSendViewSettingsModal } from './analytics/ga';
 
 import reducer from './reducer';
 
@@ -119,8 +118,7 @@ const AppProvider = ({ children }) => {
   }
 
   const toggleSidebar = () => {
-    // gaSendViewSettingsModal();
-    // dispatch({ type: "TOGGLE_SIDEBAR", state });
+    dispatch({ type: "TOGGLE_SIDEBAR", state });
   };
 
   return (
