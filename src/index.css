@@ -6,10 +6,10 @@ Begin Variables
 
 :root {
   --clr-primary-1: rgb(119, 146, 201);
-  --clr-primary-2: rgb(176,182,201);
-  --clr-primary-3: rgb(64,74,111);
-  --clr-primary-4: rgb(42,51,71);
-  --clr-primary-5: rgb(19,25,45);
+  --clr-primary-2: rgb(176, 182, 201);
+  --clr-primary-3: rgb(64, 74, 111);
+  --clr-primary-4: rgb(42, 51, 71);
+  --clr-primary-5: rgb(19, 25, 45);
   --transition: all 0.3s linear;
 }
 
@@ -36,12 +36,15 @@ Begin Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 /*
 =============== 
 End Global Styles
@@ -175,24 +178,29 @@ End Global Styles
   display: flex;
   overflow: hidden;
 }
+
 .slide-img {
   width: 80%;
   height: 50%;
   object-fit: cover;
   margin-bottom: 3rem;
 }
+
 .slide-background-color {
   width: 100%;
   height: 100%;
 }
+
 article h4 {
   text-transform: uppercase;
 }
+
 .icon {
   font-size: 3rem;
   margin-top: 1rem;
   color: var(--clr-primary-5);
 }
+
 article {
   position: absolute;
   top: 0;
@@ -203,13 +211,16 @@ article {
   transition: var(--transition);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
+
 article.lastSlide {
   transform: translateX(-100%);
 }
+
 article.nextSlide {
   transform: translateX(100%);
 }
@@ -317,7 +328,7 @@ article.nextSlide {
   overflow: hidden;
   min-height: calc(100vh - 116px);
   justify-content: space-around;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(19,25,45,0.5)), #ffffff url("./images/learn1.jpeg") no-repeat center -10rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 25, 45, 0.5)), #ffffff url("./images/learn1.jpeg") no-repeat center -9rem;
 }
 
 .home .home__callout {
@@ -432,7 +443,11 @@ article.nextSlide {
   border: 1px solid var(--clr-primary-2);
 }
 
-.colors, .numbers, .letters, .shapes, .game-template {
+.colors,
+.numbers,
+.letters,
+.shapes,
+.game-template {
   padding: 1rem 1rem 3rem 1rem;
   padding-bottom: 2rem;
   display: flex;
@@ -504,7 +519,7 @@ article.nextSlide {
 
 .footer {
   padding: 1rem;
-  background: rgb(19,25,45);
+  background: rgb(19, 25, 45);
   color: white;
   width: 100%;
   text-align: right;
@@ -514,9 +529,11 @@ article.nextSlide {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -526,9 +543,11 @@ article.nextSlide {
   .sidebar {
     width: 400px;
   }
+
   .home .home__promotional {
     flex-flow: row;
   }
+
   .home .home__benefits {
     justify-content: center;
   }
@@ -541,30 +560,42 @@ article.nextSlide {
 }
 
 @media only screen and (orientation: landscape) {
-  .colors, .numbers, .letters, .shapes, .game-template {
+
+  .colors,
+  .numbers,
+  .letters,
+  .shapes,
+  .game-template {
     padding: 0 2rem;
   }
+
   .home {
     height: auto;
   }
+
   .footer {
     position: inherit;
   }
+
   .learn {
     padding-bottom: 0;
   }
+
   .section__body .article {
     flex-flow: row;
   }
+
   .section__title {
     font-size: 1rem;
   }
+
   .letters .slide-background-color p,
   .numbers .slide-background-color p,
   .shapes .slide-background-color p {
     font-size: 5rem;
   }
+
   .slide-background-color svg {
     font-size: 5rem;
-}
+  }
 }
