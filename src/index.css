@@ -328,7 +328,8 @@ article.nextSlide {
   overflow: hidden;
   min-height: calc(100vh - 116px);
   justify-content: space-around;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 25, 45, 0.5)), #ffffff url("./images/learn1.jpeg") no-repeat center -9rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 25, 45, 0.5)), #ffffff url("./images/learn2.jpeg") no-repeat center;
+  background-size: cover;
 }
 
 .home .home__callout {
